@@ -66,6 +66,5 @@ with open('output/urls.txt', 'w') as f:
         f.write(url + "\n")
 cwd = os.getcwd()
 print(cwd)
-os.system('screamingfrogseospider --crawl https://www.tiket.com/hotel/indonesia/padma-hotel-bandung-108001534490361705
- --headless --output-folder "{cwd}/output/" --export-format csv --export-tabs Internal:All')
+os.system(‘screamingfrogseospider --crawl https://www.tiket.com/hotel/indonesia/padma-hotel-bandung-108001534490361705 --headless --output-folder “{cwd}/output/” --export-format csv --export-tabs Internal:All’)
 create_formatted_result()
