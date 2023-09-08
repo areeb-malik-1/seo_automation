@@ -65,5 +65,5 @@ with open('output/urls.txt', 'w') as f:
     for url in url_list:
         f.write(url + "\n")
 cwd = os.getcwd()
-os.system(f'/Applications/Screaming\ Frog\ SEO\ Spider.app/Contents/MacOS/ScreamingFrogSEOSpiderLauncher --crawl-list {cwd}/output/urls.txt --headless --output-folder "{cwd}/output/" --export-format csv --export-tabs Internal:All')
+os.system(f'ScreamingFrogSEOSpider --crawl-list {cwd}/output/urls.txt --headless --output-folder "{cwd}/output/" --export-format csv --export-tabs Internal:All')
 create_formatted_result()
