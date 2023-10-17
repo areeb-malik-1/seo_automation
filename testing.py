@@ -49,9 +49,11 @@ def compare_rows(wrow):
                 #diffs_list = [(a, b, c) for a, b, c in zip(actual_row_title, actual_row, actual_w_row) if b != c]
                 diffs_list = compare_assert(row, w_row, first_w_row)
                 if len(diffs_list) > 0:
-                    print("('Column name', 'Actual value', 'Expected value'")
                     for diff in diffs_list:
-                        print(diff)
+                        print(f"Column name: {diff[0]}")
+                        print(f"Actual value: {diff[1]}")
+                        print(f"Expected value: {diff[2]}")
+                        print("")
                 assert len(diffs_list) < 1, f"Assertions failed"
                 #assert actual_row == actual_w_row
 
